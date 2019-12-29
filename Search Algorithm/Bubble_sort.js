@@ -15,4 +15,4 @@ function bubbleSort(array) {
     return array;
 }
 
-bubbleSort([7, 2, 4, 6, 5, 7, 3]);
+bubbleSort([-7, 2, 4, -6, 5, 7, 3]);

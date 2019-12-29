@@ -1,19 +1,19 @@
-function makeArrayConsecutive(sequence) {
+function makeArrayConsecutive2(statues) {
     let noSwap;
-    for (let i = sequence.length; i > 0; i--) {
+    for (let i = statues.length; i > 0; i--) {
         noSwap = true;
         for (let j = 0; j < i - 1; j++) {
-            let temp = sequence[j];
-            if (sequence[j] > sequence[j + 1]) {
-                sequence[j] = sequence[j + 1];
-                sequence[j + 1] = temp;
+            let temp = statues[j];
+            if (statues[j] > statues[j + 1]) {
+                statues[j] = statues[j + 1];
+                statues[j + 1] = temp;
                 noSwap = false;
             }
         }
         if (noSwap) break;
     }
 
-    let sort = sequence
+    let sort = statues
     let missingnumber = []
 
     let start = 0;
@@ -40,9 +40,6 @@ function makeArrayConsecutive(sequence) {
     }
 
 
-    return missingnumber
+    return missingnumber.length
 }
-console.log(makeArrayConsecutive([2, 3, 6, 8])) //return [4, 5, 7]  
-// [-1, -3]  return [-2]
-// sequence: [-1, 3]  return [0, 1, 2]
-// sequence: [5, 4, 6] return []
+console.log(makeArrayConsecutive([6, 2, 3, 8])) //return 3  
