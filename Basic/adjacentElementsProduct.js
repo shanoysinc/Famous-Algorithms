@@ -6,7 +6,7 @@ function adjacentElementsProduct(inputArray) {
     let largestProduct = inputArray[0] * inputArray[1];
 
     for (let i = 0; i < inputArray.length - 1; i++) {
-        console.log((inputArray[i], inputArray[i + 1]))
+
         let value = inputArray[i] * inputArray[i + 1]
         if (value > largestProduct) {
             largestProduct = value
